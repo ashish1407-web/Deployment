@@ -1,6 +1,7 @@
 const BookSchema=require('./Schema')
 const getUser = async (req, res)=>{
     try {
+        console.log("he is there");
      return res.send("Details is here");
     } catch (err) {
         res.status(500).send({ status: false, Error: err.message })
