@@ -1,4 +1,4 @@
-const express=require('express')
+const express = require('express')
 const bodyParser = require('body-parser');
 const route = require('../router');
 const mongoose = require('mongoose');
@@ -9,8 +9,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 
 mongoose.connect("mongodb+srv://ecoding45:easycoding@cluster0.akkebzk.mongodb.net/Book?retryWrites=true&w=majority&appName=Cluster0", {})
-.then( () => console.log("MongoDb is connected"))
-.catch ( err => console.log(err) )
+    .then(() => console.log("MongoDb is connected"))
+    .catch(err => console.log(err))
 
 
 app.use('/', route)
